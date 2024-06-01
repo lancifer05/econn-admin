@@ -1,0 +1,137 @@
+
+.overlay {
+    width: 100%;
+    height: 100%;
+    display: none;
+    align-items: center;
+    background-color: #0000006f;
+    justify-content: center;
+    position: absolute;
+    z-index: 5;
+    font-family: arial;
+  
+  }
+  .overlay-content {
+    width: 70em;
+    height: 35em;
+    border-radius: 30px;
+    overflow: hidden;
+    background-color: #ddd;
+    display: flex;
+    position: relative;
+   
+  }
+  .overlay-content h1 {
+    margin-left: 1.3em;
+    font-size: 24px;
+  }
+  .info-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    overflow-y: scroll;
+    margin-bottom: 1.5em;
+    margin-top: 1.5em;
+  }
+  .receipt-container {
+    flex: 0.5;
+    background-color: lightgrey;
+    display: flex;
+    flex-direction: column;
+    overflow-y: scroll;
+  }
+  .image-container {
+    flex: 1;
+    
+  }
+  .image-container img {
+    height: 100%;
+    width: 100%;
+    padding-top: 1.8em;
+  }
+  .action-buttons {
+    height: 4em;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding-top: 2em;
+    padding-bottom: 1em;
+  }
+  .action-buttons button {
+    font-size: 1.4em;
+    padding: 0.3em 1em;
+  }
+  .horizontal-container {
+    display: flex;
+    align-items: center;
+    margin-left: 2em;
+  }
+
+  .pickup-info-container {
+    flex: 1;
+    flex-direction: column;
+    display: none;
+
+
+  }
+
+  .delivery-info-container {
+    display: none;
+
+
+  }
+  .pickup-info-container {
+    flex: 1;
+    flex-direction: column;
+    display: none;
+  }
+
+  .Billpayment-head{
+    padding-left: 1.8em;
+    font-family: arial;
+    font-size: 24px;
+
+  }
+
+
+  .section1 {
+    flex: 1;
+  }
+  .section2 {
+    flex: 1;
+  }
+  .pickup-info-container h2,
+  .delivery-info-container h2 {
+    margin-left: 1.3em;
+    font-size: 24px;
+
+  }
+
+  .horizontal-container .label {
+    font-weight: bold;
+    width: 10em;
+    margin: 0;
+  }
+  .horizontal-container .value {
+    margin: 0.5em;
+  }
+  .delivery-info-container .label {
+    font-size: 0.9em;
+  }
+  .overlay.ewalletbarangayclearance{
+    display: none;
+
+    }
+  .overlay.ewalletPermit{
+    display: none;
+    }
+    .overlay.ewalletCedula{
+      display: none;
+      }
+      .overlay.ewalletSummon{
+        display: none;
+        }
+        .overlay.ewalletCertofResidency{
+          display: none;
+          }
+    

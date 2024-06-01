@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://www.gstatic.com/charts/loader.js"></script>
+    <style>
+      * {
+        font-family: Arial, Helvetica, sans-serif;
+       
+      }
+      body {
+        height: 100vh;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        overflow-y: scroll;
+      }
+      header {
+        height: 5em;
+        background-color: #114272;
+      }
+      main {
+        flex: 1;
+        display: flex;
+      }
+      .nav-bar {
+        width: 17%;
+        height: 100%;
+      }
+      ul {
+        font-family: Arial;
+        list-style-type: none;
+        margin: 0;
+        height: 100%;
+
+        padding: 0;
+        background-color: #f1f1f1;
+        overflow: auto;
+        padding-top: 15px;
+        font-size: 15px;
+      }
+
+      li a {
+        display: block;
+        color: #000;
+        padding: 8px 18px;
+        text-decoration: none;
+      }
+
+      li a:hover:not(.active) {
+        background-color: #7a7a7a;
+        color: white;
+      }
+      .main-wrapper {
+        flex: 1;
+        margin-bottom: 2em;
+        margin-left: 1.8em;
+   
+      }
+      .graph-section {
+        width: 100%;
+        height: 35em;
+        display: flex;
+        gap: 1em;
+      }
+      #graph {
+        width: 46em;
+        border-radius: 15px;
+        margin-left: 1em;
+        overflow: hidden;
+        border: 3px solid #333;
+      }
+      #graph text{
+        background-color: blue;
+
+      }
+      .monitor-column {
+        width: 15em;
+        display: flex;
+        flex-direction: column;
+        gap: 1em;
+      }
+      .box {
+        flex: 1;
+        border-radius: 15px;
+        background-color: #333;
+        text-align: center;
+        height: 2.8em;
+      }
+   
+      .box h2 {
+        color: #eee;
+        font-size: 1em;
+        margin-top: 1.5em;
+
+      }
+      .pending {
+        background-color: #148cff;
+        margin-left: 10%;
+      }
+      .delivery {
+        background-color: #6a8098;
+        margin-left: 10%;
+      }
+      .pick-up {
+        background-color: #7895cb;
+        margin-left: 10%;
+      }
+      .users {
+        background-color: #4a55a2;
+        margin-left: 10%;
+      }
+      .value{
+        font-size: 1.8em;
+        font-weight: bold;
+
+      }
+      .dashboard-header{
+        font-size: 1.5em;
+      }
+
+  
+  .page-header {
+    background-color: #114272;
+    width: 100%;
+    font-family: Arial;
+    color: #eee;
+    height: 6em;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    align-items: center;
+    padding-left: 2em;
+    font-size: .8em;
+  }
+    </style>
+  </head>
+  <body>
+
+    <main>
+      <div class="nav-bar">
+        <ul>
+          <li><a href="dashboard.html">Overview</a></li>
+          <li><a href="request.html">Certficate Requests</a></li>
+          <li><a href="billrequests.html">Bill Requests</a></li>
+          <li><a href="onprocess.html">On Process</a></li>
+          <li><a href="history.html">History</a></li>
+          <li><a href="announcement.html">Announcements</a></li>
+          <li><a href="logout.html">Log Out</a></li>
+        </ul>
+      </div>
+      <div class="head-wrapper">
+        <div class="page-header">
+          <h1 class = "Bill-header">Dashboard</h1>
+        </div>
+      <div class="main-wrapper">
+        <h1 class="dashboard-header">Sales Performance Summary</h1>
+        <div class="graph-section">
+          <div id="graph"></div>
+          <div class="monitor-column">
+            <div class="box pending">
+              <h2>Pending Requests</h2>
+              <p class='value' id="totalPendingRequests" >value</p>
+            </div>
+            <div class="box delivery">
+              <h2>Total Delivery</h2>
+              <p class='value' id="totalDelivery" >0</p>
+            </div>
+            <div class="box pick-up">
+              <h2>Total Pick-up</h2>
+              <p class='value' id="totalPickup" >value</p>
+            </div>
+            <div class="box users">
+              <h2>Total Users</h2>
+              <p class='value' id="totalUsers">value</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  <script type="module" src="/dashboard.js"></script>
+  </body>
+</html>

@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="overlayStyle.css" />
+    <link rel="stylesheet" href="ewallet.css" />
+  </head>
+  <body>
+
+<!--------- REGISTRATION FORMS  ------------------------------------------------------------->
+
+<!-- DAYCARE REGISTRATION -->
+
+    <div class="overlay daycareRegistration">
+      <div class="overlayContentWrapper">
+        <button class = "closeBtn">x</button>
+        <div class="infoWrapper">
+          <h1>Daycare Center Registration Form</h1>
+          <div class="horizontalWrapper">
+            <p class = "label">Name of Student:&nbsp;</p>
+            <p id= studentRegName>Value</p>
+          </div>
+          <div class="horizontalWrapper">
+            <p class =  "label">Address:&nbsp;</p>
+            <p id = studentRegAddress>Value</p>
+          </div>
+          <div class="horizontalWrapper">
+            <p class = "label">Gender:&nbsp;</p>
+            <p id = studentRegGender>Value</p>
+          </div>
+          <div class="horizontalWrapper">
+            <p class = "label">Age:&nbsp;</p>
+            <p id = studentRegAge >Value</p>
+          </div>
+          <div class="horizontalWrapper">
+            <p class = "label">Date of Birth:&nbsp;</p>
+            <p id = studentRegBirthdate >Value</p>
+          </div>
+          <div class="horizontalWrapper">
+            <p class = "label">Name of Guardian:&nbsp;</p>
+            <p id = studentRegGuardian >Value</p>
+          </div>
+ 
+         
+  
+            <div class="action-buttons">
+              <button id="acceptBtnBills">Confirm</button>
+              <button id="rejectBtnBills">Cancel</button>
+          </div>
+
+        </div>      
+      </div>
+    </div>
+  </div>
+
+  <!-- SENIOR MEMERSHIP -->
+
+  <div class="overlay seniorMembership">
+    <div class="overlayContentWrapper">
+      <button class = "closeBtn">x</button>
+      <div class="infoWrapper">
+        <h1>Senior Membership Form</h1>
+        <div class="horizontalWrapper">
+          <p class = "label">Name:&nbsp;</p>
+          <p id=seniorMemName>Value</p>
+        </div>
+        <div class="horizontalWrapper">
+          <p class = "label">Birth Date:&nbsp;</p>
+          <p id = seniorMemBirthDate>Value</p>
+        </div>
+        <div class="horizontalWrapper">
+            <p class = "label">Birth Place:&nbsp;</p>
+            <p id = seniorMemBirthPlace>Value</p>
+          </div>>
+        <div class="horizontalWrapper">
+          <p class = "label">Age:&nbsp;</p>
+          <p id = seniorMemAge >Value</p>
+        </div>
+        <div class="horizontalWrapper">
+          <p class = "label">Gender:&nbsp;</p>
+          <p id = seniorMemGender >Value</p>
+        </div>
+        <div class="horizontalWrapper">
+            <p class = "label">Height:&nbsp;</p>
+            <p id = seniorMemHeight >Value</p>
+          </div>
+          <div class="horizontalWrapper">
+            <p class = "label">Weight:&nbsp;</p>
+            <p id = seniorMemWeight >Value</p>
+          </div>
+          <div class="horizontalWrapper">
+            <p class = "label">Civil Status:&nbsp;</p>
+            <p id = seniorMemCivil >Value</p>
+          </div>
+          <div class="horizontalWrapper">
+            <p class = "label">Citizenship:&nbsp;</p>
+            <p id = seniorMemCitizenship >Value</p>
+          </div>
+          <div class="horizontalWrapper">
+            <p class = "label">Mobile Number:&nbsp;</p>
+            <p id = seniorMemMobile >Value</p>
+          </div>
+        <div class="horizontalWrapper">
+          <p class = "label">Address:&nbsp;</p>
+          <p id = seniorMemAddress >Value</p>
+        </div>
+
+          <div class="action-buttons">
+            <button id="acceptBtnBills">Confirm</button>
+            <button id="rejectBtnBills">Cancel</button>
+        </div>
+
+      </div>      
+    </div>
+  </div>
+</div>
+  
+<!--------- BILL PAYMENTS  ------------------------------------------------------------->
+
+<!-- GARBGE COLLECTION PAYMENT --------------------------------------------------------->
+
+<div class="overlay garbageBill">
+    <div class="overlay-content">
+      <button class = "closeBtn">x</button>
+      <div class="info-container">
+        <h1 class="Billpayment-head">Garbage Collection Payment</h1>
+        <div class="horizontal-container">
+          <p class="label">Name:</p>
+          <p class='value' id="garbageBillName">Value</p>
+        </div>
+        <div class="horizontal-container">
+          <p class="label">Address:</p>
+          <p class='value' id="garbageBillAddress">Value</p>
+        </div>>
+
+        <!-- PAYMENT INFO -->
+
+        <h1 class="Billpayment-head">Payment Info</h1>
+        <div class="horizontal-container">
+          <p class="label">Account Name:</p>
+          <p  class='value GARBAccountName' id= "GBillAccountName">Value</p>
+        </div>
+        <div class="horizontal-container">
+          <p class="label">Account Number:</p>
+          <p class='value GARBAccountNum' id= "GBillAccountNum">Value</p>
+        </div>
+     
+
+
+        <div class="horizontal-container">
+          <p class="label">Reference Number:&nbsp;</p>
+          <p class='value GARBRefNum' id= "GBillRefNum">Value</p>
+        </div>
+      </div>
+
+      <div class="receipt-container">
+        <div class="image-container">
+          <img id ="receipt-image" class="Imagereceipt" src="" alt="" />
+        </div>
+        <div class="action-buttons">
+          <button id="acceptBtnBills">Confirm</button>
+          <button id="rejectBtnBills">Cancel</button>
+        </div>
+      </div>
+    </div>
+  </div>
+    </div>
+
+<!-- DAYCARE TUITION PAYMENT ------------------------------------------------------------>
+
+<div class="overlay daycareBill">
+    <div class="overlay-content">
+      <button class = "closeBtn">x</button>
+      <div class="info-container">
+        <h1 class="Billpayment-head">Daycare Tuition Payment</h1>
+        <div class="horizontal-container">
+          <p class="label">Name of Student:</p>
+          <p class='value' id="daycareBillName">Value</p>
+        </div>
+        <div class="horizontal-container">
+          <p class="label">Address:</p>
+          <p class='value' id="daycareBillAddress">Value</p>
+        </div>
+        <div class="horizontal-container">
+            <p class="label">Name of Guardian:</p>
+            <p class='value' id="daycareBillGuardian">Value</p>
+          </div>
+          
+        <!-- PAYMENT INFO -->
+
+        <h1 class="Billpayment-head">Payment Info</h1>
+        <div class="horizontal-container">
+          <p class="label">Account Name:</p>
+          <p  class='value DAYCAccountName' id="DaycbillAccountName">Value</p>
+        </div>
+        <div class="horizontal-container">
+          <p class="label">Account Number:</p>
+          <p class='value DAYCAccountNum' id="DaycbillAccountNum">Value</p>
+        </div>
+      
+        <div class="horizontal-container">
+          <p class="label">Reference Number:&nbsp;</p>
+          <p class='value DAYCRefNum' id="DaycbillRefNum">Value</p>
+        </div>
+      </div>
+
+      <div class="receipt-container">
+        <div class="image-container">
+          <img id ="receipt-image" class="Imagereceipt" src="" alt="" />
+        </div>
+        <div class="action-buttons">
+          <button id="acceptBtnBills">Confirm</button>
+          <button id="rejectBtnBills">Cancel</button>
+        </div>
+      </div>
+    </div>
+  </div>
+    </div>
+
+
+    <div class="nav-bar">
+      <ul>
+        <li><a href="dashboard.html">Overview</a></li>
+        <li><a href="request.html">Certficate Requests</a></li>
+        <li><a href="billrequests.html">Bill Payment Requests</a></li>
+        <li><a href="onProcess.html">On Process</a></li>
+        <li><a href="history.html">History</a></li>
+        <li><a href="announcement.html">Announcements</a></li>
+        <li><a href="logout.html">Log Out</a></li>
+      </ul>
+    </div>
+    <div class="main-wrapper">
+
+      <div class="page-header">
+        <h1 class = "head1">Bill Payment and Registration Requests</h1>
+          <!-- <select name="" id="filter">
+            <option value="*">All</option>
+            <option value="Cash on Delivery">Garbage Collection Payment</option>
+            <option value="E-Wallet">Daycare Center Tuition</option>
+          </select> -->
+      </div>
+
+      <div class="table-wrapper">
+        <table>
+          <thead>
+            <th id="type">Type</th>
+            <th>Date Requested</th>
+            <th>Action</th>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </div>
+    <script type="module" src="billscript.js"></script>
+  </body>
+</html>

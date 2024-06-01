@@ -1,0 +1,314 @@
+
+  body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    overflow: hidden;
+  }
+  ul {
+    font-family: Arial;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    background-color: #f1f1f1;
+    height: 100%;
+    overflow: auto;
+    padding-top: 15px;
+    font-size: 15px;
+  }
+   
+  li a {
+    display: block;
+    color: #000;
+    padding: 8px 18px;
+    text-decoration: none;
+  }
+   
+  li a:hover:not(.active) {
+    background-color: #7a7a7a;
+    color: white;
+  }
+   
+  
+  .nav-bar {
+    width: 17%;
+  }
+  .main-wrapper {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+  }
+  .page-header {
+    background-color: #114272;
+    width: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #eee;
+    height: 7em;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    align-items: center;
+  }
+  .page-header h1 {
+    margin: 0;
+    margin-left: 1em;
+  }
+   
+  td,
+  th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 10px;
+    margin-left: 10%;
+  }
+   
+  tr:nth-child(even) {
+    background-color: #dddddd;
+  }
+  td,
+  th {
+    border: 1.5px solid #797979;
+    text-align: left;
+    padding: 8px;
+  }
+   
+  tr:nth-child(even) {
+    background-color: #eeeeee;
+  }
+  .line {
+    height: 8px;
+    background-color: #f1f1f1;
+    margin: 0%;
+    margin-top: 15px;
+    width: 100%;
+  }
+  table {
+    flex: 1;
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+  }
+   
+  .action-buttons {
+    display: flex;
+    justify-content: space-around;
+    width: auto;
+    margin: 0;
+  }
+   
+  .table-wrapper {
+    flex: 1;
+    overflow-y: scroll;
+  }
+   
+  #filter {
+    font: 1em sans-serif;
+    border: none;
+    border-radius: 5px;
+    padding: 0.2em 1em;
+
+
+  
+  }
+  select {
+    margin-right: 1em;
+  }
+
+  .announceToolTip{
+    width: 30em;
+    height: 5em;
+    background-color: #333;
+    position: absolute;
+    right: 0;
+    color: #eee;
+    font-family: Arial, Helvetica, sans-serif;
+    bottom: 0;
+    transform: translateX(100%);
+    display: flex;
+    transition: transform .5s ease;
+    justify-content: center;
+    align-items: center;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    margin-bottom: 3em;
+  }
+  h1{
+          background-color: #144272 ;
+          color: white;
+          font-family: Arial;
+          font-size: 20px;
+          padding-top: 15px;
+   
+          padding-bottom: 15px;
+          text-align: left;
+          
+      }
+      h2{
+        background-color: #144272 ;
+        color: white;
+        font-family: Arial;
+        font-size: 20px;
+        padding-top: 15px;
+        padding-left: 1em;
+        padding-bottom: 15px;
+        text-align: left;
+        
+    }
+
+
+  .head1{
+
+        color: white;
+        font-family: Arial;
+        font-size: 2em;
+        padding-top: 15px;
+        padding-left: 15px;
+        padding-bottom: 15px;
+        text-align: center;
+        background-color: 144272;
+      
+      }
+
+
+  form{
+      font-size: 18px ;
+      font-family: Arial;
+      padding-top: 25px;
+      padding-left: 25px;
+  }
+  textarea {
+          width: 50%;
+          height: 200px;
+          padding: 12px 20px;
+          box-sizing: border-box;
+          border: 2px solid #ccc;
+          border-radius: 8px;
+          background-color: #f8f8f8;
+          font-size: 16px;
+          resize: none;
+          margin-left: 25px;
+          margin-top: 20px;
+          margin-bottom: 15px;
+
+      }
+  .button {
+          background-color: #144272;
+          border: none;
+          border-radius: 12px;
+          color: white;
+          padding: 5px 27px;
+          text-align: center;
+          text-decoration: none;
+          display: inline-block;
+          font-size: 16px;
+          margin: 4px 2px;
+          cursor: pointer;
+          margin-left: 62.5%;
+          opacity: 0.9;
+  }
+  
+  .button:hover {
+        opacity:1;
+}
+  input[type ='file'] {
+    margin-top: 20px;
+    margin-left: 25px ;
+
+  }
+         
+  .wrapper{
+    width: 100% ;
+    height: 30em;
+    display: flex;
+    margin-top: 5em;
+    flex-direction: row;
+    gap: 5em;
+  }
+  .innerWrapper{
+    flex: 2;
+  }
+  .wrapper form {
+    display: flex;
+    flex-direction: column;
+  }
+  textarea{
+    margin: 0;
+    width: 100%;
+    margin-left: -7px;
+    margin-top: 1em;
+  }
+  form input{
+    width: fit-content;
+    align-self: end;
+  }
+  .horizontal-wrapper{
+    display: flex;
+    justify-content: space-between;
+  }
+  .image-container{
+    flex: 1;
+    margin-right: 5em;
+    margin-left: 5em;
+  }
+  .image-container img{
+    height: 100%;
+    width: 100%;
+    border-radius: 10px;
+  }
+  #title{
+    width: 97%;
+    transform: translateX(-2px);
+    font-size: 1.2em;
+    padding: .4em 0;
+    padding-left: 1em;
+    justify-self: center;
+    border: 2px solid #acacac;
+    border-radius: 5px;
+  }
+  #imageInput{
+    margin: 0;
+  }
+  #submitBtn{
+    transform: translateX(-6em);
+    font-size: .9em;
+  }
+  .custom-button{
+  background-color: #3498db; /* Set the background color */
+  color: #fff; /* Set the text color */
+  padding: 5px 15px; /* Set padding for the button */
+  border: none; 
+  border-radius: 5px;
+  cursor: pointer; 
+  transition: background-color 0.3s; 
+  }
+  .custom-button:hover {
+    background-color: #2980b9; /* Change the background color on hover */
+  }
+  .custom-buttonrequest{
+  background-color: #427D9D; /* Set the background color */
+  color: #fff; /* Set the text color */
+  padding: 5px 15px; /* Set padding for the button */
+  border: none; 
+  border-radius: 5px;
+  cursor: pointer; 
+  transition: background-color 0.3s; 
+  }
+  .custom-buttonrequest:hover{
+    background-color: #164863; /* Change the background color on hover */
+  }
+  
+  .statusLabel{
+    border-radius: 6px;
+    background-color: transparent;
+    width: 9em;
+  
+  }
+    #completedBtn{
+      border: 3px solid lime;
+      color: green;
+  
+    }
+    #rejectedBtn{
+      border: 3px solid red;
+      color: maroon;
+    }

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+        }
+
+        .wrapper {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh; /* Adjust the height as needed */
+        }
+
+        form {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            text-align: center;
+        }
+
+        h2 {
+            margin: 0;
+            font-size: 24px;
+        }
+
+        p {
+            margin: 10px 0;
+        }
+        
+        button {
+            background-color: #427D9D;
+            color: #fff;
+            border: none;
+            border-radius: 8px;
+            padding: 8.5px 20px;
+            cursor: pointer;
+            font-size: 16px;
+            opacity: 0.9;
+            font-size: 14px;
+            
+        }
+        button:hover {
+        background-color: #144272;
+}
+#logout-button{
+    background-color: #427D9D;
+            color: #fff;
+            border: none;
+            border-radius: 8px;
+            padding: 8.5px 20px;
+            cursor: pointer;
+            font-size: 16px;
+            opacity: 0.9;
+            font-size: 14px;
+}
+#logout-button:hover {
+        background-color: #144272;
+}
+    </style>
+</head>
+<body>
+<div class="wrapper">
+    <form id="logout-form">
+   
+        <p>Are you sure you want to log out?</p>
+        <button type="button" id="logout-button">Log out</button>
+    </form>
+</div>
+
+<script src="logout.js"></script>
+</body>
+</html>

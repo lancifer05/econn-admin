@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+
+      *{
+      -ms-overflow-style: none; 
+        scrollbar-width: none; 
+      }
+   
+        body {
+        display: flex;
+        flex-direction: column;
+        height: 100vh;
+        margin: 0;
+      }
+      .overlay {
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #b6b6b69d;
+     
+      }
+
+      /*CASH ON DELIVERY NO IMAGE INCLUDED */
+
+      .overlay.garbageCollectionPayment {    
+    
+      }
+      .overlay.daycareTuition {       
+  
+      }
+      .overlay.daycareRegistration {       
+  
+        }
+        .overlay.seniorMembership {       
+    
+        }
+ 
+
+      /* COD TEXT ALIGNMENT  */
+      .overlay.garbageCollectionPayment .infoWrapper{
+        align-items: left;
+      }
+
+      .overlay.overlay.daycareTuition .infoWrapper{
+        align-items: left;
+
+      }
+      .overlay.overlay.daycareRegistration.infoWrapper{
+        align-items: left;
+
+      }
+      .overlay.overlay.seniorMembership.infoWrapper{
+        align-items: left;
+
+      }
+   
+    
+
+       
+
+ 
+      .overlayContentWrapper {
+        width: 50em;
+        height: 30em;
+        background-color: #e7e7e7;
+        display: flex;
+        border-radius: 25px;
+        overflow: hidden;
+      }
+
+      .overlayContentWrapper1 {
+        width: 40em;
+        height: 30em;
+        background-color: #e7e7e7;
+        display: flex;
+        border-radius: 25px;
+        overflow: hidden;
+      }
+
+
+      
+
+      .infoWrapper {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        gap: .5em;
+        overflow-y: scroll;
+
+        
+    }
+      .imageWrapper {
+        background-color: blue;
+        flex: 0.5;
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+      }
+      .imageContainer {
+        background-color: green;
+        flex: 1;
+       
+      }
+      .actionButtonsContainer {
+        background-color: #ffffff;
+        flex: 0.2;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+      }
+
+      /* BUTTON CONTAINER FOR FORMS NO IMAGE INCLUDED */
+
+      .actionButtonsContainerCOD{
+        flex: 0.5;
+        display: flex;
+        justify-content: flex-start;
+        align-items: left;
+        align-self: left;
+        margin-bottom: 5%;
+        align-content: center;
+        gap: 2em;
+        margin-top: 3%;
+        padding-left: 5.5em;
+   
+      }
+
+      .imageContainer img {
+        background-color: rgb(255, 255, 255);
+        width: 100%;
+        height: 100%;
+      }
+      
+      #acceptBtn {
+        font-size: 1em;
+        height: 3em;
+        width: 7em;
+        border-radius: 10px;
+        color: black; 
+        border: 2px solid #4CAF50;
+        background-color: #e7e7e7;
+        font-size: 13px;
+        font-family: arial;
+        cursor: pointer;
+        border-style: outset;
+        font-weight: bold;
+      }
+      #acceptBtn:hover{
+        background-color: #4CAF50;
+        color: white;
+      }
+
+      #rejectBtn {
+        font-size: 1em;
+        height: 3em;
+        width: 7em;
+        border-radius: 10px;
+        background-color: #e7e7e7;
+        color: black; 
+        border: 2px solid #f44336;
+        font-family: Arial, ;
+        font-size: 13px;
+        cursor: pointer;
+        border-style: outset;
+        font-weight: bold;
+      }
+      #rejectBtn:hover{
+        background-color: #f44336;
+        color: white;
+      }
+      #acceptBtn1 {
+        font-size: 1em;
+        height: 3em;
+        width: 7em;
+        border-radius: 10px;
+        color: #4CAF50; 
+        border: 2px solid #4CAF50;
+        background-color: white;
+        font-size: 13px;
+        font-family: arial;
+        cursor: pointer;
+        border-style: outset;
+        font-weight: bold ;
+      }
+      #acceptBtn1:hover{
+        background-color: #4CAF50;
+        color: white;
+      }
+
+      #rejectBtn1 {
+        font-size: 1em;
+        height: 3em;
+        width: 7em;
+        border-radius: 10px;
+        background-color: white;
+        color: #f44336; 
+        border: 2px solid #f44336;
+        font-family: Arial, ;
+        font-size: 13px;
+        cursor: pointer;
+        border-style: outset;
+        font-weight: bold;
+      }
+      #rejectBtn1:hover{
+        background-color: #f44336;
+        color: white;
+      }
+   
+
+      .infoWrapper p{
+        font-size: 15px;
+        font-family: arial;
+        margin-left: 20%;  
+        text-justify: auto  ;
+        font-style: bold;
+           
+     
+      }
+      .infoWrapper h1 {
+        margin-left: 2em;
+        font-size: 20px;
+        margin-top: 5%;
+        font-family: arial;
+        text-align: left; 
+        padding-left: 5%; 
+        padding-top: 2%;
+
+      }
+
+      .infoWrapper h2 {
+        margin-left: 2em;
+        font-size: 20px;
+        font-family: arial;
+        font-style: bold;
+        margin-bottom: none;
+        text-align: left;
+        padding-left: 5%;
+
+      }
+
+      .horizontalWrapper {
+        display: flex;
+        text-align: left;
+        align-items: center;
+       
+       
+      }
+      .horizontalWrapper p {
+        margin: 0;
+        margin-left: 2em;
+        text-align: left;
+        
+      }
+      
+
+      .label{
+        width: 10em;  
+        text-align: left;
+        padding-left: 10%;
+        font-weight: bold;
+  
+      }
+   
+
+    </style>
+  </head>
+  <body>  
+
+     <!-- E- WALLET METHOD: PAY BILLS WITH IMAGE-->
+ 
+        <!-- GARBAGE COLLECTION PAYMENT -->
+
+     <div class="overlay garbageCollectionPayment">
+        <div class="overlayContentWrapper">
+          <div class="infoWrapper">
+            <h1>Garbage Collection Payment</h1>
+
+            <div class="horizontalWrapper">
+              <p class="label">Name:&nbsp;</p>
+              <p >Value</p>
+            </div>
+            <div class="horizontalWrapper">
+              <p class = "label">Address:&nbsp;</p>
+              <p>Value</p>
+            </div>
+            
+           
+            <h2>Payment Details</h2>
+            <div class="horizontalWrapper">
+              <p class = "label">Account Name:&nbsp;</p>
+              <p>Value</p>
+            </div>
+           
+            <div class="horizontalWrapper">
+              <p class = "label">Account Number:&nbsp;</p>
+              <p>Value</p>
+            </div>
+
+            <div class="horizontalWrapper">
+              <p class = "label">Amount:&nbsp;</p>
+              <p>Value</p>
+            </div>
+          
+            <div class="horizontalWrapper">
+              <p class = "label">Reference Number:&nbsp;</p>
+              <p>Value</p>
+            </div>
+          </div>
+          <div class="imageWrapper">
+            <div class="imageContainer">
+              <img src="" alt="" />
+            </div>
+  
+            <div class="actionButtonsContainer">
+              <button id="acceptBtn1">Accept</button>
+              <button id="rejectBtn1">Reject</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    <!-- DAYCARE CENTER TUITION FEE -->
+
+      <div class="overlay daycareTuition">
+        <div class="overlayContentWrapper">
+          <div class="infoWrapper">
+            <h1>Daycare Center Tuition Fee</h1>
+                    <div class="horizontalWrapper">
+                      <p class = "label">Student Name:&nbsp;</p>
+                      <p>Value</p>
+                    </div>
+                    <div class="horizontalWrapper">
+                      <p class = "label">Address:&nbsp;</p>
+                      <p>Value</p>
+                    </div>
+                    <div class="horizontalWrapper">
+                        <p class = "label">Name of Guardian:&nbsp;</p>
+                        <p>Value</p>
+                      </div>
+            
+           
+            <h2>Payment Details</h2>
+            <div class="horizontalWrapper">
+              <p class = "label">Account Name:&nbsp;</p>
+              <p>Value</p>
+            </div>
+           
+            <div class="horizontalWrapper">
+              <p class = "label">Account Number:&nbsp;</p>
+              <p>Value</p>
+            </div>
+
+            <div class="horizontalWrapper">
+              <p class = "label">Amount:&nbsp;</p>
+              <p>Value</p>
+            </div>
+          
+            <div class="horizontalWrapper">
+              <p class = "label">Reference Number:&nbsp;</p>
+              <p>Value</p>
+            </div>
+         
+            
+          </div>
+          <div class="imageWrapper">
+            <div class="imageContainer">
+              <img src="" alt="" />
+            </div>
+  
+            <div class="actionButtonsContainer">
+              <button id="acceptBtn1">Accept</button>
+              <button id="rejectBtn1">Reject</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+       <!-- REGISTRATION AND MEMBERSHIP FORMS NO IMAGE INCLUDED -->
+
+       <div class="overlay daycareRegistration">
+        <div class="overlayContentWrapper1">
+          <div class="infoWrapper">
+             <h1>Daycare Registration Form</h1>
+            <div class="horizontalWrapper">
+              <p class = "label">Student Name:&nbsp;</p>
+              <p>Value</p>
+            </div>
+            <div class="horizontalWrapper">
+              <p class = "label">Address:&nbsp;</p>
+              <p>Value</p>
+            </div>
+            <div class="horizontalWrapper">
+                <p class = "label">Gender:&nbsp;</p>
+                <p>Value</p>
+              </div>
+              <div class="horizontalWrapper">
+                <p class = "label">Age:&nbsp;</p>
+                <p>Value</p>
+              </div>
+              <div class="horizontalWrapper">
+                <p class = "label">Date of Birth:&nbsp;</p>
+                <p>Value</p>
+              </div>
+              <div class="horizontalWrapper">
+                <p class = "label">Name of Guiardian:&nbsp;</p>
+                <p>Value</p>
+              </div>    
+  
+    
+              <div class="actionButtonsContainerCOD">
+                <button id="acceptBtn">Accept</button>
+                <button id="rejectBtn">Reject</button>
+            </div>
+  
+          </div>      
+        </div>
+      </div>
+    </div>
+            
+
+         
+       <div class="overlay seniorMembership">
+        <div class="overlayContentWrapper1">
+          <div class="infoWrapper">
+            <h1>Senior Membership Form</h1>
+            <div class="horizontalWrapper">
+              <p class = "label">Name:&nbsp;</p>
+              <p>Value</p>
+            </div>
+            <div class="horizontalWrapper">
+              <p class = "label">Birth Date:&nbsp;</p>
+              <p>Value</p>
+            </div>
+            <div class="horizontalWrapper">
+                <p class = "label">Birth Place:&nbsp;</p>
+                <p>Value</p>
+              </div>
+              <div class="horizontalWrapper">
+                <p class = "label">Age:&nbsp;</p>
+                <p>Value</p>
+              </div>
+              <div class="horizontalWrapper">
+                <p class = "label">Height:&nbsp;</p>
+                <p>Value</p>
+              </div>
+              <div class="horizontalWrapper">
+                <p class = "label">Weight:&nbsp;</p>
+                <p>Value</p>
+              </div>
+              <div class="horizontalWrapper">
+                <p class = "label">Civil Status:&nbsp;</p>
+                <p>Value</p>
+              </div>
+
+              <div class="horizontalWrapper">
+                <p class = "label">Citizenship:&nbsp;</p>
+                <p>Value</p>
+              </div>     
+              <div class="horizontalWrapper">
+                <p class = "label">Mobile Number:&nbsp;</p>
+                <p>Value</p>
+              </div>
+              <div class="horizontalWrapper">
+                <p class = "label">Address:&nbsp;</p>
+                <p>Value</p>
+              </div>  
+  
+    
+              <div class="actionButtonsContainerCOD">
+                <button id="acceptBtn">Accept</button>
+                <button id="rejectBtn">Reject</button>
+            </div>
+  
+          </div>      
+        </div>
+      </div>
+    </div>
+
+          
+            
+           
+  </body>
+</html>

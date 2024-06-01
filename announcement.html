@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="stylesheet" href="style.css" />
+        <link rel="stylesheet" href="overlayStyle.css" />
+        <link rel="stylesheet" href="ewallet.css" />
+      </head>
+<body>
+  <div class="announceToolTip">
+    <h3>Announced Successfully</h3>
+  </div>
+
+<style>
+   .scrollable-container {
+      max-height: 500px; /* Adjust the height as needed */
+      overflow-y: auto;
+   }
+
+    .announceToolTip{
+      width: 30em;
+      height: 5em;
+      background-color: #333;
+      position: absolute;
+      right: 0;
+      color: #eee;
+      font-family: Arial, Helvetica, sans-serif;
+      bottom: 0;
+      transform: translateX(100%);
+      display: flex;
+      transition: transform .5s ease;
+      justify-content: center;
+      align-items: center;
+      border-top-left-radius: 10px;
+      border-bottom-left-radius: 10px;
+      margin-bottom: 3em;
+    }
+    h1{
+            background-color: #144272 ;
+            color: white;
+            font-family: Arial;
+            font-size: 20px;
+            padding-top: 15px;
+            padding-left: 15px;
+            padding-bottom: 15px;
+            text-align: center;
+            
+        }
+
+
+    form{
+        font-size: 18px ;
+        font-family: Arial;
+        padding-top: 25px;
+        padding-left: 25px;
+    }
+    textarea {
+            width: 50%;
+            height: 200px;
+            padding: 12px 20px;
+            box-sizing: border-box;
+            border: 2px solid #ccc;
+            border-radius: 8px;
+            background-color: #f8f8f8;
+            font-size: 16px;
+            resize: none;
+            margin-left: 25px;
+            margin-top: 20px;
+            margin-bottom: 15px;
+  
+        }
+    .button {
+            background-color: #144272;
+            border: none;
+            border-radius: 12px;
+            color: white;
+            padding: 5px 27px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+            margin-left: 62.5%;
+            opacity: 0.9;
+    }
+    
+    .button:hover {
+          opacity:1;
+}
+    input[type ='file'] {
+      margin-top: 20px;
+      margin-left: 25px ;
+
+    }
+           
+    .wrapper{
+      width: 100% ;
+      height: 30em;
+      display: flex;
+      margin-top: 2em;
+      flex-direction: row;
+      gap: 5em;
+      margin-left: 1.5em;
+      
+    }
+    .innerWrapper{
+      flex: 2;
+    }
+    .wrapper form {
+      display: flex;
+      flex-direction: column;
+    }
+    textarea{
+      margin: 0;
+      width: 100%;
+      margin-left: -7px;
+      margin-top: 1em;
+      overflow-y: scroll;
+    }
+    form input{
+      width: fit-content;
+      align-self: end;
+    }
+    .horizontal-wrapper{
+      display: flex;
+
+    }
+    .image-container{
+      flex: 1;
+      margin-right: 6em;
+      margin-left: 5em;
+    }
+    .image-container img{
+      height: 80%;
+      width: 100%;
+      border-radius: 10px;
+      border: #144272;
+      border-style: outset;
+
+    
+    }
+  
+    #title{
+      width: 97%;
+      transform: translateX(-2px);
+      font-size: 1.2em;
+      padding: .4em 0;
+      padding-left: 1em;
+      justify-self: center;
+      border: 2px solid #acacac;
+      border-radius: 5px;
+    }
+    #imageInput{
+      margin: 0;
+    }
+    #submitBtn{
+      transform: translateX(-6em);
+      font-size: .8em;
+    }
+    .wrapperUpload{
+      flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: .5em;
+  overflow-y: scroll;
+    }
+ 
+   
+
+    </style>
+
+<div class="nav-bar">
+    <ul>
+      <li><a href="dashboard.html">Overview</a></li>
+      <li><a href="request.html">Certficate Requests</a></li>
+      <li><a href="billrequests.html">Bill Requests</a></li>
+      <li><a href="onprocess.html">On Process</a></li>
+      <li><a href="history.html">History</a></li>
+      <li><a href="announcement.html">Announcements</a></li>
+      <li><a href="logout.html">Log Out</a></li>
+    </ul>
+  </div>
+
+  <div style="margin-left:0%;height:500px;width: 100%;">
+    <div class="page-header">
+      <h1 class="head1">Announcements</h1>
+  </div>
+
+  <div class="wrapper">
+    <div class="innerWrapper">
+      <form action="">
+        <input type="text" placeholder="Title" id="title" required>
+        <textarea name="" id="description" cols="30" rows="10" placeholder="Type your announcement here..." required></textarea>
+        <div class="horizontal-wrapper">
+         <div class="file-container">
+          <p>Add Image</p>
+          <input type="file" accept="image/*" id="imageInput">
+         </div>
+        <input type="submit" value="Post" id="submitBtn" class="button">
+        </div>
+      </form>
+    </div>
+
+    <!-- <div class="image-container">
+      <img src="" alt="" id="image">
+    </div> -->
+   
+    <div class="image-container">
+  <img src="" alt="" id="image" style="height: 300px; width: 400px;">
+</div>
+
+
+</div>
+
+<div class="wrapperUpload">
+  <div id="postContainer"></div>
+</div>  
+
+    <!--------------------------------- JAVASCRIPT -------------------------------------->
+
+ <script type="module">
+  import { getStorage, uploadBytes, ref as storageRef } from "https://www.gstatic.com/firebasejs/10.5.0/firebase-storage.js";
+  import { getDatabase, ref, onValue, update, push, set } from "https://www.gstatic.com/firebasejs/10.5.0/firebase-database.js";
+  import { initializeApp } from 'https://www.gstatic.com/firebasejs/10.5.0/firebase-app.js'
+  import app from './initializeFirebase.js'
+  const storage = getStorage(app)
+  const database = getDatabase(app)
+  const inputImage = document.getElementById('imageInput');
+  const submit = document.querySelector('form');
+
+  const titleInput = document.getElementById('title');
+  const descriptionInput = document.getElementById('description');
+  const postButton = document.getElementById('submitBtn');
+  const postContainer = document.getElementById('postContainer');
+
+
+
+  inputImage.addEventListener('change', () => {
+    const image = inputImage.files[0];
+    if (image) {
+      const reader = new FileReader();
+      reader.onload = (event) => {
+        document.getElementById('image').src = event.target.result;
+      };
+      reader.readAsDataURL(image);
+    }
+  });
+  postButton.addEventListener('click', () => {
+
+const title = titleInput.value;
+const description = descriptionInput.value;
+
+// // Create a new post element
+// const postElement = document.createElement('div');
+// postElement.className = 'post';
+// postElement.innerHTML = `<h2>${title}</h2><p>${description}</p>`;
+
+// // Append the new post to the post container
+// postContainer.appendChild(postElement);
+
+
+});
+
+submit.addEventListener('submit', (e) => {
+  e.preventDefault();
+  const imageFile = inputImage.files[0];
+  document.querySelector('.announceToolTip').style.transform = 'translateX(0)';
+  document.getElementById('image').src = '';
+ 
+  // Push the data to the database and obtain the reference to the pushed data
+  const announcementRef = push(ref(database, 'Announcement'));
+  set(announcementRef, {
+    'Title': document.getElementById('title').value,
+    'Description': document.getElementById('description').value
+  }).then((snap) => {
+    console.log(snap);
+    setTimeout(() => {
+      document.querySelector('.announceToolTip').style.transform = 'translateX(100%)';
+    }, 3000);
+
+    if (imageFile) {
+      // Use the key from the pushed data as part of the storage reference path
+      const storageRefPath = `Announcement/${announcementRef.key}.png`;
+      const imageRef = storageRef(storage, storageRefPath);
+      uploadBytes(imageRef, imageFile).then((snapshot) => {
+        console.log('Image uploaded successfully');
+      }).catch((error) => {
+        console.error('Error uploading image', error);
+      });
+    } else {
+      alert('Invalid Image!');
+    }
+  });
+  titleInput.value = ''
+  descriptionInput.value = ''
+
+});
+
+
+
+function getTodaysDateTime() {
+  const today = new Date();
+  const year = today.getFullYear();
+  const month = String(today.getMonth() + 1).padStart(2, '0');
+  const day = String(today.getDate()).padStart(2, '0');
+  const hours = String(today.getHours()).padStart(2, '0');
+  const minutes = String(today.getMinutes()).padStart(2, '0');
+  const seconds = String(today.getSeconds()).padStart(2, '0');
+  return `${year}-${month}-${day} ${hours}:${minutes}:${seconds}`;
+}
+
+ </script>
+
+
+
+
+</body>
+</html>
